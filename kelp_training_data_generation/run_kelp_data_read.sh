@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Default parameters
-nc_file=""
+nc_file="LandsatKelpBiomass_2024_Q1_withmetadata.nc"
 output_dir="kelp_nc_segmented_data"
 
 # Parse command-line arguments

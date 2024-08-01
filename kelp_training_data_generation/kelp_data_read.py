@@ -51,7 +51,7 @@ def main(nc_file, output_dir='kelp_nc_segmented_data'):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Process NetCDF file to filter biomass data and save to CSV.')
-    parser.add_argument('nc_file', type=str, help='Path to the NetCDF file.')
+    parser.add_argument('--nc_file', type=str, help='Path to the NetCDF file.')
     parser.add_argument('--output_dir', type=str, default='kelp_nc_segmented_data', help='Directory to save the CSV files.')
 
     args = parser.parse_args()

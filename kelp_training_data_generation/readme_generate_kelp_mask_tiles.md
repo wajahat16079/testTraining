@@ -1,4 +1,4 @@
-# Satellite Image Processor - Chipify
+# Satellite Image Processor 
 
 This program processes large satellite images (GeoTIFFs) stored in an S3 bucket. It segments these images into smaller chips and uploads the chips back to S3, utilizing multiprocessing for efficient processing.
 
@@ -32,25 +32,25 @@ The tile generator can be run using the provided bash script or directly with Py
 1. Make the script executable:
 
     ```bash
-    chmod +x run_gen_kelp_tiles.sh
+    chmod +x run_generate_kelp_mask_tiles.sh
     ```
     
-    Run this if there are any synatx error
+    If there are any syntax errors due to Windows line endings, convert the script to Unix format:
     ```bash
-    sed -i 's/\r$//' run_gen_kelp_tiles.sh
+    sed -i 's/\r$//' run_generate_kelp_mask_tiles.sh
     ```
 
 
 2. Run the script with default parameters:
 
     ```bash
-    ./run_gen_kelp_tiles.sh
+    ./run_generate_kelp_mask_tiles.sh
     ```
 
 3. Or customize the parameters:
 
     ```bash
-    ./gen_kelp_tiles.sh --kelp-tiles-directory "your-directory" --bucket "your-bucket" --bucket-folder "your-folder" 
+    ./run_generate_kelp_mask_tiles.sh --kelp-tiles-directory "your-directory" --bucket "your-bucket" --bucket-folder "your-folder" 
     ```
 
 4. Or open the script and edit the default values for the parameters.
