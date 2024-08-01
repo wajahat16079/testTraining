@@ -85,7 +85,8 @@ def process_point(data_kelp, rowNum, directory):
     # Extract latitude and longitude of the point at row 'rowNum'
     lat = data_kelp.iloc[rowNum]["latitude"]
     lon = data_kelp.iloc[rowNum]["longitude"]
-    print(f"Processing Q {data_kelp.iloc[rowNum]["quarter"]} {data_kelp.iloc[rowNum]["year"]}  point at row {rowNum}: lon={lon}, lat={lat}")
+    print(f"Processing Q {data_kelp.iloc[rowNum]['quarter']} {data_kelp.iloc[rowNum]['year']}  point at row {rowNum}: lon={lon}, lat={lat}")
+
 
     # Define the time range for the search
     time_range = get_quarter_range(data_kelp.iloc[0]['time'])
