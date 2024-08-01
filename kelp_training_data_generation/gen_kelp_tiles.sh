@@ -4,12 +4,11 @@
 kelp_tiles_directory="kelp_tiles_segmented_data"
 bucket="kelpwatch2"
 bucket_folder="training/full-tiles"
-bucket_folder="training/test"
 
 # Parse command-line arguments
 while [[ $# -gt 0 ]]; do
   case $1 in
-    --kelp-tiles-directory)
+    --kelp_tiles_directory)
       kelp_tiles_directory="$2"
       shift
       shift
@@ -19,7 +18,7 @@ while [[ $# -gt 0 ]]; do
       shift
       shift
       ;;
-    --bucket-folder)
+    --bucket_folder)
       bucket_folder="$2"
       shift
       shift
@@ -33,6 +32,6 @@ done
 
 # Run the Python script
 python3 generate_kelp_mask_tiles.py \
-  --kelp-tiles-directory "$kelp_tiles_directory" \
+  --kelp_tiles_directory "$kelp_tiles_directory" \
   --bucket "$bucket" \
-  --bucket-folder "$bucket_folder" 
+  --bucket_folder "$bucket_folder"
