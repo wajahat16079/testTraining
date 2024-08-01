@@ -1,5 +1,6 @@
 import json
 import csv
+import argparse
 
 def parse_geojson(geojson_path):
     """
@@ -40,14 +41,15 @@ def save_coordinates_to_csv(coordinates, output_path):
         for coord in coordinates:
             writer.writerow(coord)
 
-def main():
+
+def main(geojson_path, output_csv_path):
     """
     Main function to parse GeoJSON file and save the extracted coordinates to a CSV file.
+
+    Args:
+    geojson_path (str): Path to the input GeoJSON file.
+    output_csv_path (str): Path to the output CSV file.
     """
-    # Define paths for input GeoJSON file and output CSV file
-    geojson_path = 'earth-coastlines-1m.geo.json'
-    output_csv_path = 'coastline-coordinate-data.csv'
-    
     # Parse the GeoJSON file to get coastline coordinates
     coastline_coordinates = parse_geojson(geojson_path)
     
@@ -55,4 +57,10 @@ def main():
     save_coordinates_to_csv(coastline_coordinates, output_csv_path)
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description='Parse a GeoJSON file and save the extracted coordinates to a CSV file.')
+    parser.add_argument('--geojson-path', type=str, required=True, help='Path to the input GeoJSON file.')
+    parser.add_argument('--output-path', type=str, required=True, help='Path to the output CSV file.')
+
+    args = parser.parse_args()
+    
+    main(args.geojson_path, args.output_path)

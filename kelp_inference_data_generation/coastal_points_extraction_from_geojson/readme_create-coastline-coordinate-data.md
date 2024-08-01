@@ -14,7 +14,7 @@ This program parses a GeoJSON file to extract coordinates from MultiPolygon geom
 
     ```bash
     git clone https://github.com/YourUsername/geojson-coordinate-extractor.git
-    cd geojson-coordinate-extractor
+    cd kelp_inference_data_generation//coastal_points_extraction_from_geojson/
     ```
 
 2. Install the required Python packages (recommended to use a [virtual environment](https://docs.python.org/3/library/venv.html)):
