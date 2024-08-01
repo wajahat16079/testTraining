@@ -55,11 +55,12 @@ def calculate_bbox(lon, lat, shift_meters=30):
 
     return bbox
 
-def process_point(data_kelp_temp, rowNum, directory, cloud_threshold, date_range):
+def process_point(catalog, data_kelp_temp, rowNum, directory, cloud_threshold, date_range):
     """
     Process a single data point to find and save Sentinel-2 imagery data within the bounding box.
 
     Args:
+        catalog (sentinel instance): API
         data_kelp_temp (DataFrame): DataFrame containing the kelp coordinates.
         rowNum (int): Row number of the point to process.
         directory (str): Directory to save the output CSV files.
@@ -183,7 +184,7 @@ def main(data_kelp_path, date_range, csv_dir):
 
         # Process the first unprocessed point
         rowNum = unprocessed_indices[0]
-        process_point(data_kelp, rowNum, csv_dir, 100, date_range)
+        process_point(catalog, data_kelp, rowNum, csv_dir, 100, date_range)
         # Update the processed flag for the current point
         data_kelp.loc[rowNum, 'processed_flag'] = 1
 

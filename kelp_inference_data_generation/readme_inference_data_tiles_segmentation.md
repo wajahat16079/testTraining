@@ -5,17 +5,7 @@ This program processes coastal coordinates from a CSV file to segment and filter
 ## Prerequisites
 
 - Python 3.x
-- Required Python packages (installable via `requirements.txt`):
-  - `geopandas`
-  - `shapely`
-  - `matplotlib`
-  - `pystac-client`
-  - `planetary-computer`
-  - `requests`
-  - `pandas`
-  - `math`
-  - `glob`
-  - `datetime`
+- coastal coordinates csv
 
 ## Installation
 
@@ -23,7 +13,7 @@ This program processes coastal coordinates from a CSV file to segment and filter
 
     ```bash
     git clone https://github.com/YourUsername/inference-data-tiles-segmentation.git
-    cd inference-data-tiles-segmentation
+    cd kelp_inference_data_generation/
     ```
 
 2. Install the required Python packages (recommended to use a [virtual environment](https://docs.python.org/3/library/venv.html)):
