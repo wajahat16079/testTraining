@@ -32,19 +32,19 @@ The tile generator can be run using the provided bash script or directly with Py
 1. Make the script executable:
 
     ```bash
-    chmod +x gen_kelp_tiles.sh
+    chmod +x run_gen_kelp_tiles.sh
     ```
     
     Run this if there are any synatx error
     ```bash
-    sed -i 's/\r$//' gen_kelp_tiles.sh
+    sed -i 's/\r$//' run_gen_kelp_tiles.sh
     ```
 
 
 2. Run the script with default parameters:
 
     ```bash
-    ./gen_kelp_tiles.sh
+    ./run_gen_kelp_tiles.sh
     ```
 
 3. Or customize the parameters:
