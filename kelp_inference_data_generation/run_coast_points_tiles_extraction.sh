@@ -2,7 +2,7 @@
 
 # Default values for arguments
 DEFAULT_FOLDER_PATH="world_monthly_inference_tiles_new"
-DEFAULT_OUTPUT_CSV="world_coastal_tilesTemp/coastal_tiles_world_2023_01.csv"
+DEFAULT_OUTPUT_CSV="world_coastal_tiles_tiles_only/coastal_tiles_world.csv"
 
 # Print usage instructions
 usage() {
